@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:exam/display/dashboard.dart';
 import 'package:exam/screens/signup.dart';
 import 'package:flutter/material.dart';
 
@@ -44,7 +45,12 @@ class Login extends StatelessWidget {
                 width: double.infinity,
                 height: 50,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Dashboard()),
+                    );
+                  },
                   style: ButtonStyle(
                     backgroundColor:
                         const MaterialStatePropertyAll<Color>(

@@ -4,12 +4,12 @@ import 'firebase_options.dart';
 import 'package:exam/screens/start.dart';
 import 'package:flutter/material.dart';
 
-// com.example.exam
-// 72:6E:C1:1C:FD:DF:BD:E3:E9:6C:FC:40:D8:EE:EF:EE:59:B0:5F:7D
-
 void main() async {
+  
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   runApp(const MyApp());
 }
